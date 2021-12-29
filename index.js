@@ -114,6 +114,7 @@ module.exports = function supersorc(mod) {
 	mod.hook('S_START_USER_PROJECTILE', 9, event => {
 		if(!enabled) return
 		if(mod.game.me.class !== 'sorcerer') return
+		block_hit = false
 		if(!bossid) return
 		let targets = []		
 			targets.push({
